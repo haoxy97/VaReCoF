@@ -1,0 +1,28 @@
+
+c     potential data common block
+
+      common /ipotdat/ nipotpar(nelmx,neffmx,nchmx),
+     $     npotpar(nelmx,neffmx,nchmx),ipotpar(nelmx,neffmx,nchmx,
+     $     nippmx),ictf1(nelmx,neffmx,nchmx),ictf2(nelmx,neffmx,nchmx),
+     $     iinterp(nelmx,neffmx,nchmx),ipotstd(nelmx,neffmx,nchmx,10)
+
+      common /ipotangle/ i1flag(nelmx,neffmx,nchmx),
+     $     i2flag(nelmx,neffmx,nchmx),nrpot(nelmx,neffmx,nchmx),
+     $     nangles(nelmx,neffmx,nchmx)
+
+      common /dpotdat/ potpar(nelmx,neffmx,nchmx,nppmx),
+     $     potmorse(nelmx,neffmx,nchmx,3),
+     $     potvarshni(nelmx,neffmx,nchmx,3),
+     $     potinterp(nelmx,neffmx,nchmx,nppmx),
+     $     potion(nelmx,neffmx,nchmx,4),
+     $     hsdiam(nelmx,neffmx,nchmx,natommx,nfrag),
+     $     dljsig(nelmx,neffmx,nchmx,natommx,nfrag),
+     $     dljeps(nelmx,neffmx,nchmx,natommx,nfrag),
+     $     potsix(nelmx,neffmx,nchmx)
+
+      common /potangle/ theta1e(nelmx,neffmx,nchmx),
+     $     theta2e(nelmx,neffmx,nchmx),period(nelmx,neffmx,nchmx,5),
+     $     qqe(nelmx,neffmx,nchmx,5),alpf(nelmx,neffmx,nchmx,5),
+     $     fij0(nelmx,neffmx,nchmx,5,5),rpathf(nelmx,neffmx,nchmx,
+     $     nrpotm),qqer(nelmx,neffmx,nchmx,5,nrpotm),
+     $     fijr(nelmx,neffmx,nchmx,5,5,nrpotm)

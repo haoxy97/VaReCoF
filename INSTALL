@@ -1,6 +1,0 @@
-Prerequisites:
-1. the slatec (general math) library.
-2. some version of lapack library. 
-3. MPI environment
-
-You need to adjust the supplied Makefile to your invironment: lapack libraries (LDLIBS), mpi c++ compiler, c++ compiler, etc.

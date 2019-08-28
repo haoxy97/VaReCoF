@@ -1,0 +1,16 @@
+c     Maximum number of electronic states, effective states and channels
+
+      parameter (nelmx = 12, neffmx=3, nchmx=14)
+      
+c     Maximum number of atoms
+
+      parameter (natommx=100)
+
+c     Number of fragments and dimension which should never change
+
+      parameter (nfrag=2, ndim=3)
+
+c     Maximum dimension of input potential parameters Potential 
+
+      parameter (nippmx=1500,nppmx=1500,nrpotm=20)
+
