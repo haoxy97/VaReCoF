@@ -19,25 +19,19 @@ message(STATUS "Found SLATEC: ${SLATEC}")
 include_directories(SYSTEM ${MPI_INCLUDE_PATH})
 
 add_library(varecoflibs
-#    ${PROJECT_SOURCE_DIR}/src/dummi.cc compiled fine
     ${PROJECT_SOURCE_DIR}/src/interflux.cc
     ${PROJECT_SOURCE_DIR}/src/sjk.cc
     ${PROJECT_SOURCE_DIR}/src/integral.cc
-#    ${PROJECT_SOURCE_DIR}/src/dynamics.cc
     ${PROJECT_SOURCE_DIR}/src/raninit.cc
     ${PROJECT_SOURCE_DIR}/src/log.cc
-#    ${PROJECT_SOURCE_DIR}/src/pot_plot.cc
     ${PROJECT_SOURCE_DIR}/src/run.cc
     ${PROJECT_SOURCE_DIR}/src/rfactor.cc
     ${PROJECT_SOURCE_DIR}/src/surface.cc
     ${PROJECT_SOURCE_DIR}/src/pes.cc
     ${PROJECT_SOURCE_DIR}/src/units.cc
-#    ${PROJECT_SOURCE_DIR}/src/random_common.cc
-#    ${PROJECT_SOURCE_DIR}/src/run1.cc
     ${PROJECT_SOURCE_DIR}/src/molpro.cc
     ${PROJECT_SOURCE_DIR}/src/multipole.cc
     ${PROJECT_SOURCE_DIR}/src/flux.cc
-#    ${PROJECT_SOURCE_DIR}/src/interpolate.cc
     ${PROJECT_SOURCE_DIR}/src/comm.cc
     ${PROJECT_SOURCE_DIR}/src/gauss.cc
     ${PROJECT_SOURCE_DIR}/src/expression.cc

@@ -1,0 +1,13 @@
+name: varecof-env
+
+channels:
+    - pacchem
+
+dependencies:
+    - cmake
+    - gcc_linux-64
+    - gxx_linux-64
+    - mpi
+    - blas
+    - openblas # [linux]
+    - slatec
