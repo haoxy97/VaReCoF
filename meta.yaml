@@ -1,0 +1,27 @@
+# cmd: conda build . -c pacchem
+package:
+    name: varecof
+    version: "0.1"
+
+source:
+    path: .
+
+requirements:
+    build:
+        - cmake
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+        - {{ compiler('mpicxx') }}
+        - mpi
+        - blas
+        - openblas # [linux]
+        - slatec
+    run:
+        - cmake
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+        - {{ compiler('mpicxx') }}
+        - mpi
+        - blas
+        - openblas # [linux]
+        - slatec
