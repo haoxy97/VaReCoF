@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-mkdir build
+mkdir -p build
 cd build
 
 export CFLAGS="${CFLAGS} -I${CONDA_PREFIX}/include"
