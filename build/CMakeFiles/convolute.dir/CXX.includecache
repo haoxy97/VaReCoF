@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/lcrc/project/CMRP/pacc/VaReCoF/src/convolute.cc
+vector
+-
+fstream
+-
+iostream
+-
+string
+-
+cmath
+-
+cstdlib
+-
+sstream
+-
+

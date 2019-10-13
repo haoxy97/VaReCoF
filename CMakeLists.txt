@@ -51,6 +51,7 @@ add_executable(cut_multi ${PROJECT_SOURCE_DIR}/src/cut_multi.cc)
 add_executable(ej_flux ${PROJECT_SOURCE_DIR}/src/ej_flux.cc)     
 add_executable(mc_flux ${PROJECT_SOURCE_DIR}/src/mc_flux.cc)     
 add_executable(tst_test ${PROJECT_SOURCE_DIR}/src/tst_test.cc)       
+add_executable(convert_struct ${PROJECT_SOURCE_DIR}/src/convert_struct.cc)       
 add_executable(rfactor ${PROJECT_SOURCE_DIR}/src/rfactor.cc)        
 add_executable(sampling ${PROJECT_SOURCE_DIR}/src/sampling.cc)      
 add_executable(multi ${PROJECT_SOURCE_DIR}/src/multi.cc)       
@@ -69,6 +70,8 @@ target_link_libraries(mc_flux
         varecoflibs ${BLAS_LIBRARIES} ${LAPACK_LIBRARIES} ${SLATEC})       
 target_link_libraries(tst_test 
         varecoflibs ${BLAS_LIBRARIES} ${LAPACK_LIBRARIES} ${SLATEC})       
+target_link_libraries(convert_struct
+        varecoflibs ${BLAS_LIBRARIES} ${LAPACK_LIBRARIES} ${SLATEC})       
 target_link_libraries(rfactor 
         varecoflibs ${MPI_LIBRARIES} ${BLAS_LIBRARIES} ${LAPACK_LIBRARIES} ${SLATEC})       
 target_link_libraries(sampling 
@@ -86,4 +89,5 @@ target_link_libraries(multi
 #install(TARGETS multi DESTINATION bin)
 #install(TARGETS rfactor DESTINATION bin)  
 #install(TARGETS sampling DESTINATION bin) 
+#install(TARGETS convert_struct DESTINATION bin)  
 #install(TARGETS tst_test DESTINATION bin)  
