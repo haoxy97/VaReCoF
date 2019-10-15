@@ -1,39 +1,39 @@
 Determining if the function sgemm_ exists failed with the following output:
 Change Dir: /lcrc/project/CMRP/pacc/VaReCoF/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_538e2/fast 
-/usr/bin/gmake -f CMakeFiles/cmTC_538e2.dir/build.make CMakeFiles/cmTC_538e2.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_82ee7/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_82ee7.dir/build.make CMakeFiles/cmTC_82ee7.dir/build
 gmake[1]: Entering directory `/lcrc/project/CMRP/pacc/VaReCoF/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_538e2.dir/CheckFunctionExists.cxx.o
-/home/kmoore/miniconda/envs/pacc-env-mini/bin/x86_64-conda_cos6-linux-gnu-c++    -fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -I/home/kmoore/miniconda/envs/pacc-env-mini/include -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_538e2.dir/CheckFunctionExists.cxx.o -c /lcrc/project/CMRP/pacc/VaReCoF/build/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_538e2
-/blues/gpfs/home/kmoore/miniconda/envs/pacc-env-mini/bin/cmake -E cmake_link_script CMakeFiles/cmTC_538e2.dir/link.txt --verbose=1
-/home/kmoore/miniconda/envs/pacc-env-mini/bin/x86_64-conda_cos6-linux-gnu-c++  -fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -I/home/kmoore/miniconda/envs/pacc-env-mini/include -DCHECK_FUNCTION_EXISTS=sgemm_  -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections  -rdynamic CMakeFiles/cmTC_538e2.dir/CheckFunctionExists.cxx.o  -o cmTC_538e2 
-/blues/gpfs/home/kmoore/miniconda/envs/pacc-env-mini/bin/../lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/../../../../x86_64-conda_cos6-linux-gnu/bin/ld: CMakeFiles/cmTC_538e2.dir/CheckFunctionExists.cxx.o: in function `main':
+Building CXX object CMakeFiles/cmTC_82ee7.dir/CheckFunctionExists.cxx.o
+/home/kmoore/miniconda/envs/pacc-env-mini/bin/x86_64-conda_cos6-linux-gnu-c++    -fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -I/home/kmoore/miniconda/envs/pacc-env-mini/include -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_82ee7.dir/CheckFunctionExists.cxx.o -c /lcrc/project/CMRP/pacc/VaReCoF/build/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_82ee7
+/blues/gpfs/home/kmoore/miniconda/envs/pacc-env-mini/bin/cmake -E cmake_link_script CMakeFiles/cmTC_82ee7.dir/link.txt --verbose=1
+/home/kmoore/miniconda/envs/pacc-env-mini/bin/x86_64-conda_cos6-linux-gnu-c++  -fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -I/home/kmoore/miniconda/envs/pacc-env-mini/include -DCHECK_FUNCTION_EXISTS=sgemm_  -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections  -rdynamic CMakeFiles/cmTC_82ee7.dir/CheckFunctionExists.cxx.o  -o cmTC_82ee7 
+/blues/gpfs/home/kmoore/miniconda/envs/pacc-env-mini/bin/../lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/../../../../x86_64-conda_cos6-linux-gnu/bin/ld: CMakeFiles/cmTC_82ee7.dir/CheckFunctionExists.cxx.o: in function `main':
 CheckFunctionExists.cxx:(.text.startup.main+0xd): undefined reference to `sgemm_'
 collect2: error: ld returned 1 exit status
-gmake[1]: *** [cmTC_538e2] Error 1
+gmake[1]: *** [cmTC_82ee7] Error 1
 gmake[1]: Leaving directory `/lcrc/project/CMRP/pacc/VaReCoF/build/CMakeFiles/CMakeTmp'
-gmake: *** [cmTC_538e2/fast] Error 2
+gmake: *** [cmTC_82ee7/fast] Error 2
 
 
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /lcrc/project/CMRP/pacc/VaReCoF/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_aeb64/fast 
-/usr/bin/gmake -f CMakeFiles/cmTC_aeb64.dir/build.make CMakeFiles/cmTC_aeb64.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_3e59c/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_3e59c.dir/build.make CMakeFiles/cmTC_3e59c.dir/build
 gmake[1]: Entering directory `/lcrc/project/CMRP/pacc/VaReCoF/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_aeb64.dir/CheckSymbolExists.cxx.o
-/home/kmoore/miniconda/envs/pacc-env-mini/bin/x86_64-conda_cos6-linux-gnu-c++    -fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -I/home/kmoore/miniconda/envs/pacc-env-mini/include    -o CMakeFiles/cmTC_aeb64.dir/CheckSymbolExists.cxx.o -c /lcrc/project/CMRP/pacc/VaReCoF/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
-Linking CXX executable cmTC_aeb64
-/blues/gpfs/home/kmoore/miniconda/envs/pacc-env-mini/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aeb64.dir/link.txt --verbose=1
-/home/kmoore/miniconda/envs/pacc-env-mini/bin/x86_64-conda_cos6-linux-gnu-c++  -fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -I/home/kmoore/miniconda/envs/pacc-env-mini/include   -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections  -rdynamic CMakeFiles/cmTC_aeb64.dir/CheckSymbolExists.cxx.o  -o cmTC_aeb64 
-/blues/gpfs/home/kmoore/miniconda/envs/pacc-env-mini/bin/../lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/../../../../x86_64-conda_cos6-linux-gnu/bin/ld: CMakeFiles/cmTC_aeb64.dir/CheckSymbolExists.cxx.o: in function `main':
+Building CXX object CMakeFiles/cmTC_3e59c.dir/CheckSymbolExists.cxx.o
+/home/kmoore/miniconda/envs/pacc-env-mini/bin/x86_64-conda_cos6-linux-gnu-c++    -fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -I/home/kmoore/miniconda/envs/pacc-env-mini/include    -o CMakeFiles/cmTC_3e59c.dir/CheckSymbolExists.cxx.o -c /lcrc/project/CMRP/pacc/VaReCoF/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_3e59c
+/blues/gpfs/home/kmoore/miniconda/envs/pacc-env-mini/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e59c.dir/link.txt --verbose=1
+/home/kmoore/miniconda/envs/pacc-env-mini/bin/x86_64-conda_cos6-linux-gnu-c++  -fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -I/home/kmoore/miniconda/envs/pacc-env-mini/include   -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections  -rdynamic CMakeFiles/cmTC_3e59c.dir/CheckSymbolExists.cxx.o  -o cmTC_3e59c 
+/blues/gpfs/home/kmoore/miniconda/envs/pacc-env-mini/bin/../lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/../../../../x86_64-conda_cos6-linux-gnu/bin/ld: CMakeFiles/cmTC_3e59c.dir/CheckSymbolExists.cxx.o: in function `main':
 CheckSymbolExists.cxx:(.text.startup.main+0x3): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-gmake[1]: *** [cmTC_aeb64] Error 1
+gmake[1]: *** [cmTC_3e59c] Error 1
 gmake[1]: Leaving directory `/lcrc/project/CMRP/pacc/VaReCoF/build/CMakeFiles/CMakeTmp'
-gmake: *** [cmTC_aeb64/fast] Error 2
+gmake: *** [cmTC_3e59c/fast] Error 2
 
 File /lcrc/project/CMRP/pacc/VaReCoF/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
@@ -53,18 +53,18 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /lcrc/project/CMRP/pacc/VaReCoF/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_11efe/fast 
-/usr/bin/gmake -f CMakeFiles/cmTC_11efe.dir/build.make CMakeFiles/cmTC_11efe.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_ed4f0/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_ed4f0.dir/build.make CMakeFiles/cmTC_ed4f0.dir/build
 gmake[1]: Entering directory `/lcrc/project/CMRP/pacc/VaReCoF/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_11efe.dir/CheckFunctionExists.cxx.o
-/home/kmoore/miniconda/envs/pacc-env-mini/bin/x86_64-conda_cos6-linux-gnu-c++    -fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -I/home/kmoore/miniconda/envs/pacc-env-mini/include -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_11efe.dir/CheckFunctionExists.cxx.o -c /lcrc/project/CMRP/pacc/VaReCoF/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_11efe
-/blues/gpfs/home/kmoore/miniconda/envs/pacc-env-mini/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11efe.dir/link.txt --verbose=1
-/home/kmoore/miniconda/envs/pacc-env-mini/bin/x86_64-conda_cos6-linux-gnu-c++  -fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -I/home/kmoore/miniconda/envs/pacc-env-mini/include -DCHECK_FUNCTION_EXISTS=pthread_create  -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections  -rdynamic CMakeFiles/cmTC_11efe.dir/CheckFunctionExists.cxx.o  -o cmTC_11efe -lpthreads 
+Building CXX object CMakeFiles/cmTC_ed4f0.dir/CheckFunctionExists.cxx.o
+/home/kmoore/miniconda/envs/pacc-env-mini/bin/x86_64-conda_cos6-linux-gnu-c++    -fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -I/home/kmoore/miniconda/envs/pacc-env-mini/include -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_ed4f0.dir/CheckFunctionExists.cxx.o -c /lcrc/project/CMRP/pacc/VaReCoF/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_ed4f0
+/blues/gpfs/home/kmoore/miniconda/envs/pacc-env-mini/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed4f0.dir/link.txt --verbose=1
+/home/kmoore/miniconda/envs/pacc-env-mini/bin/x86_64-conda_cos6-linux-gnu-c++  -fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -I/home/kmoore/miniconda/envs/pacc-env-mini/include -DCHECK_FUNCTION_EXISTS=pthread_create  -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections  -rdynamic CMakeFiles/cmTC_ed4f0.dir/CheckFunctionExists.cxx.o  -o cmTC_ed4f0 -lpthreads 
 /blues/gpfs/home/kmoore/miniconda/envs/pacc-env-mini/bin/../lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/../../../../x86_64-conda_cos6-linux-gnu/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-gmake[1]: *** [cmTC_11efe] Error 1
+gmake[1]: *** [cmTC_ed4f0] Error 1
 gmake[1]: Leaving directory `/lcrc/project/CMRP/pacc/VaReCoF/build/CMakeFiles/CMakeTmp'
-gmake: *** [cmTC_11efe/fast] Error 2
+gmake: *** [cmTC_ed4f0/fast] Error 2
 
 

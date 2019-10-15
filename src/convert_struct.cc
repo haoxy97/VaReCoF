@@ -24,6 +24,7 @@ int main (int argc, char* argv[])
  
   string ds_inp, ds_out; // dividing surface array initializer
   input_data ["ds_inp_file"]  = Read(ds_inp, "divsur.inp");
+  input_data ["ds_out_file"]  = Read(ds_out, "divsur.out");
 
   string mol_spec_file; // molecular specifications file name
   input_data ["mol_spec_file"] = Read(mol_spec_file, "structure.inp");
