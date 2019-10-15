@@ -67,7 +67,7 @@ int main (int argc, char* argv[])
   for(int frag = 0; frag < 2; ++frag) {
     cout << "Fragment " << frag << ": \n";
     for(int at = 0; at < mol_array[frag]->size(); ++at) {
-      cout << setw(2) << mol_array[frag]->begin()[at].name(); // << at+1;
+      cout << setw(2) << mol_array[frag]->begin()[at].name();
       for(int i = 0; i < 3; ++i)
 	cout << setw(6) <<  mol_array[frag]->begin()[at].mf_pos[i];
       cout << "\n";

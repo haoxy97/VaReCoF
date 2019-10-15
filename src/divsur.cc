@@ -71,7 +71,6 @@ void surf_init (const char* in_name, const char* out_name)
 
 	for(int a = 0; a < mol_array[frag]->size(); ++a) {
 	  //
-	  // to << setw(2) << mol_array[frag]->atom(a).name() << a + 1;
 	  to << setw(2) << mol_array[frag]->atom(a).name();
 
 	  // standard frame
