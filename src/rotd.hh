@@ -236,6 +236,8 @@ public:
 
   Ater begin () { return atoms.begin() + start; }
   Const_ater begin () const { return atoms.begin() + start; }
+  Atom& atom (int i) { return *(atoms.begin() + start + i); }
+  const Atom& atom (int i) const { return *(atoms.begin() + start + i); }
   virtual Ater end () = 0;
   virtual Const_ater end () const = 0;
 

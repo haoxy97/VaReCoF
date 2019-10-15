@@ -36,8 +36,17 @@ void surf_init (const char* in_name, const char* out_name)
   to.setf(ios::fixed, ios::floatfield);
 
   int frag = 0;
-  TMatrix<double, 3> rot_mat [2];
-  double ref_pos [2][3];
+
+  // reference frame rotation
+  //
+  bool need_rotation[2];
+  TMatrix<double, 3> rot_mat[2];
+
+  // reference frame shift
+  //
+  bool need_shift[2];
+  double ref_pos[2][3];
+
   vector<pair<string, Expr> > pnt_xpr[2]; // pivot points position of 2 frags
 
   vector<pair<string, Expr> > dst_xpr;    // interpoint distances
@@ -50,7 +59,74 @@ void surf_init (const char* in_name, const char* out_name)
   skip_space(from);
   while(from >> token) {
 
-    if (token == end_key) {// make surface
+    if(token == end_key) {// make surface
+      //
+      // print atomic coordinates in the dividing surface frame 
+      //
+      to << "Molecular geometry in the frame associated with the dividing surface(s) definition\n";
+
+      for(int frag = 0; frag < 2; ++frag) {
+	//
+	to << "Fragment " << frag + 1 << ":\n";
+
+	for(int a = 0; a < mol_array[frag]->size(); ++a) {
+	  //
+	  // to << setw(2) << mol_array[frag]->atom(a).name() << a + 1;
+	  to << setw(2) << mol_array[frag]->atom(a).name();
+
+	  // standard frame
+	  //
+	  if(!need_rotation[frag] && !need_shift[frag]) {
+	    //
+	    for(int i = 0; i < 3; ++i)
+	      //
+	      to << setw(13) <<  mol_array[frag]->atom(a).mf_pos[i];
+	  }
+	  // non-standard frame
+	  //
+	  else {
+	    //
+	    double tmp_pos[3];
+	
+	    for(int i = 0; i < 3; ++i)
+	      //
+	      tmp_pos[i] =  mol_array[frag]->atom(a).mf_pos[i];
+
+	    if(need_shift[frag])
+	      //
+	      for(int i = 0; i < 3; ++i)
+	        //
+	        tmp_pos[i] -=  ref_pos[frag][i];
+	
+	    if(need_rotation[frag]) {
+	      //
+	      double pos[3];
+
+	      vector_matrix_product(tmp_pos, rot_mat[frag], pos);
+
+	      for(int i = 0; i < 3; ++i)
+	        //
+	        to << setw(13) <<  pos[i];
+	    }
+	    else {
+	      //
+	      for(int i = 0; i < 3; ++i)
+	        //
+	        to << setw(13) <<  tmp_pos[i];
+	    }
+	  }
+
+	  to << "\n";
+	}
+
+	to << "\n";
+      }
+  for(int frag = 0; frag < 2; ++frag) {
+    for(int at = 0; at < mol_array[frag]->size(); ++at) {
+      cout << "\n";
+    }
+
+      }
 
       // check dimensions
       for(int i = 0; i < var_spec.size(); ++i)
@@ -222,26 +298,45 @@ void surf_init (const char* in_name, const char* out_name)
 	throw Form_Err();
       }
 
-      from >> itemp; // reference frame origin
-      if(itemp <= 0 || mol_array[frag]->type() == ATOM)
+      // reference frame shift
+      //
+      from >> itemp; 
+      if(itemp <= 0 || mol_array[frag]->type() == ATOM) {
+	//
+	need_shift[frag] = false;
+
 	for(int i = 0; i < 3; ++i)
 	  ref_pos[frag] [i] = 0.;
+      }
       else if(itemp > mol_array[frag]->size()) {
 	cout << funame << "reference atom "<< itemp << " does not exist\n";
 	throw Form_Err();
       }
-      else
+      else {
+	//
+	need_shift[frag] = true;
+
 	for(int i = 0; i < 3; ++i)
 	  ref_pos[frag] [i] = (mol_array[frag]->begin()+itemp-1)->mf_pos[i];
+      }
 
       // orientation
+      //
       int ref_at_num [3];
-      bool need_rotation = true;
+
+
       if(mol_array[frag]->type() == NONLINEAR) {
+	//
+        need_rotation[frag] = true;
+
 	for(int i = 0; i < 3; ++i) {
+	  //
 	  from >> ref_at_num[i];
+
 	  if(ref_at_num[i] <= 0) {
-	    need_rotation = false;
+	    //
+	    need_rotation[frag] = false;
+
 	    break;
 	  }
 	  else if(ref_at_num[i] > mol_array[frag]->size()) {
@@ -250,14 +345,17 @@ void surf_init (const char* in_name, const char* out_name)
 	    throw Form_Err();
 	  }
 	}
+	
 	getline(from, stemp);
       }
       else {
-	need_rotation = false;
+	//
+	need_rotation[frag] = false;
+
 	getline(from, stemp);
       }
 
-      if(need_rotation) {
+      if(need_rotation[frag]) {
 
 	for(int i = 0; i < 3; ++i) {
 	  int i1 = (i+1) % 3;
